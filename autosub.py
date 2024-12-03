@@ -8,7 +8,7 @@ def main():
     parser.add_argument('video_path', type=str, nargs='?', help='The path to the video file.')
     parser.add_argument('--srt_only', action='store_true', help='If set to true, program outputs .srt file, without burning the subtitles into the video. ')
     parser.add_argument('--words', action='store_true', help='If set to true, faster-whisper provides timestamps for each word.')
-    parser.add_argument('--gpu', action='store_true', help='If set to True, faster-whisper will use GPU to run the model. GPU execution requires cuDNN 9 for CUDA 12. Read detailed instructions on the Github page.')
+    parser.add_argument('--gpu', action='store_true', help='If set to true, faster-whisper will use GPU to run the model. GPU execution requires cuDNN 9 for CUDA 12. Read detailed instructions on the Github page.')
     args = parser.parse_args()
 
     if not args.video_path:
