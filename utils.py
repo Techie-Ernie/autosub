@@ -29,7 +29,7 @@ def transcribe_audio(input_file, words, gpu):
         segments, info = model.transcribe(
             input_file,
             word_timestamps=True,
-            initial_prompt="Paper Rex, Evil Geniuses, davai, mindfreak, f0rsakeN, Benkai, CGRS, jawgemo, Boostio, Demon1, Ethan, Com, Ascent, Bind, Haven, Split, Icebox, Breeze, Fracture, Pearl, Lotus, Spike, Eco, Full Buy, Half Buy, Operator, Phantom, Vandal, Sheriff, Ghost, Spectre, Ares, Odin, Ultimate, Clutch, Ace, Rotate, Retake, Push, Defuse, Plant, Smurf, Peek, Flash, Molly, Smoke, Dart, Recon, Ult Orb, Spike Rush, Competitive, Unrated, Deathmatch, Spike Plant, Spike Defuse, Omen, Jett, Phoenix, Reyna, Sage, Sova, Cypher, Killjoy, Brimstone, Viper, Astra, Skye, Yoru, Breach, Raze, Chamber, Neon, Fade, Harbor, Gekko, Deadlock, Iso, Team Deathmatch, Premier Mode, Ranked, Radiant, Immortal, Diamond, Platinum, Gold, Silver, Bronze, Iron, Clutch Minister, IGL, Lurker, Entry Fragger, Controller, Sentinel, Duelist, Initiator, Crosshair, Spray Control, Headshot, Body Shot, Footwork, Utility, Economy, Anti-Eco, Force Buy, Operator Play, Wallbang, One-Tap, Trade Kill, Post-Plant, Pre-Plant, Default, Execute, Fake, Retake, Rotate, Lurking, Peekers Advantage, Map Control, Site Execute, Site Hold, Site Take, Spike Carrier, Spike Runner, Team Synergy, Comms, Callouts, Flank, Bait, Trade, Mid Control, Split Push, Default Play, Aggro Play, Passive Play, Utility Usage, Ult Economy, Teamfight, Post-Plant",
+            initial_prompt="Paper Rex, Evil Geniuses, davai, mindfreak, f0rsakeN, , jinggg, jawgemo, Boostio, Demon1, Ethan, Com, Ascent, Bind, Haven, Split, Icebox, Breeze, Fracture, Pearl, Lotus, Spike, Eco, Full Buy, Half Buy, Operator, Phantom, Vandal, Sheriff, Ghost, Spectre, Ares, Odin, Ultimate, Clutch, Ace, Rotate, Retake, Push, Defuse, Plant, Smurf, Peek, Flash, Molly, Smoke, Dart, Recon, Ult Orb, Spike Rush, Competitive, Unrated, Deathmatch, Spike Plant, Spike Defuse, Omen, Jett, Phoenix, Reyna, Sage, Sova, Cypher, Killjoy, Brimstone, Viper, Astra, Skye, Yoru, Breach, Raze, Chamber, Neon, Fade, Harbor, Gekko, Deadlock, Iso, Team Deathmatch, Premier Mode, Ranked, Radiant, Immortal, Diamond, Platinum, Gold, Silver, Bronze, Iron, Clutch Minister, IGL, Lurker, Entry Fragger, Controller, Sentinel, Duelist, Initiator, Crosshair, Spray Control, Headshot, Body Shot, Footwork, Utility, Economy, Anti-Eco, Force Buy, Operator Play, Wallbang, One-Tap, Trade Kill, Post-Plant, Pre-Plant, Default, Execute, Fake, Retake, Rotate, Lurking, Peekers Advantage, Map Control, Site Execute, Site Hold, Site Take, Spike Carrier, Spike Runner, Team Synergy, Comms, Callouts, Flank, Bait, Trade, Mid Control, Split Push, Default Play, Aggro Play, Passive Play, Utility Usage, Ult Economy, Teamfight, Post-Plant, Map Pick, Map",
         )
 
         print(
@@ -64,10 +64,10 @@ def add_subtitles(
     video,
     srt,
     output_path,
-    text_font_size=80,
+    text_font_size=100,
     text_colour="white",
     text_stroke_colour="black",
-    vertical_align="bottom",
+    vertical_align="center",
     text_font="Roboto-Bold.ttf",
 ):
     vid = VideoFileClip(video)
@@ -77,7 +77,7 @@ def add_subtitles(
         font_size=text_font_size,
         color=text_colour,
         stroke_width=10,
-        margin=(10, 70),
+        margin=(None, 700),
         stroke_color=text_stroke_colour,
         vertical_align=vertical_align,
         size=vid.size,
